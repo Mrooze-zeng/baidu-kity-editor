@@ -1,5 +1,7 @@
-// const { kity, kf, jQuery } = require("lib");
-
+require("Assets/styles/page.css");
+require("Assets/styles/base.css");
+require("Assets/styles/ui.css");
+require("Assets/styles/scrollbar.css");
 var KFEditor = require("editor/editor"),
   Factory = require("editor/factory");
 
