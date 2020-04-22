@@ -2,9 +2,8 @@
  * 数学公式Latex语法解析器
  */
 
-define( function () {
+const { kity } = require("lib");
 
-    return window.kity;
-
-} );
-
+define(function () {
+  return kity;
+});

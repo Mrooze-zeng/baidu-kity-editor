@@ -1,8 +1,8 @@
 const jQuery = require("jquery");
-const kf = require("./index");
+const Factory = require("./index");
 
 jQuery(function ($) {
-  var factory = kf.EditorFactory.create($("#kfEditorContainer")[0], {
+  var factory = Factory.create($("#kfEditorContainer")[0], {
     render: {
       fontsize: 40,
     },
