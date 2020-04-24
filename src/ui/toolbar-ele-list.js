@@ -2,19 +2,19 @@
  * toolbar元素列表定义
  */
 
-define(function (require) {
-  var UI_ELE_TYPE = require("ui/ui-impl/def/ele-type"),
-    BOX_TYPE = require("ui/ui-impl/def/box-type"),
-    CHAR_POSITION = require("ui/char-position.data"),
-    OTHER_POSITION = require("ui/other-position.data"),
-    kity = require("kity");
+var UI_ELE_TYPE = require("ui/ui-impl/def/ele-type"),
+  BOX_TYPE = require("ui/ui-impl/def/box-type"),
+  CHAR_POSITION = require("ui/char-position.data"),
+  OTHER_POSITION = require("ui/other-position.data"),
+  kity = require("kity");
 
+module.exports = function (kfEditor) {
   var config = [
     {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "预设<br/>",
+          label: kfEditor.getLang("labelMap.preset"),
           className: "yushe-btn",
           icon: {
             src: require("assets/images/toolbar/btn.png"),
@@ -29,26 +29,26 @@ define(function (require) {
           width: 367,
           group: [
             {
-              title: "预设公式",
+              title: kfEditor.getLang("preset.title"),
               items: [
                 {
-                  title: "预设公式",
+                  title: kfEditor.getLang("preset.title"),
                   content: [
                     {
-                      label: "二次公式",
+                      label: kfEditor.getLang("preset.quadraticformula"),
                       item: {
                         val: "x=\\frac {-b\\pm\\sqrt {b^2-4ac}}{2a}",
                       },
                     },
                     {
-                      label: "二项式定理",
+                      label: kfEditor.getLang("preset.binomialtheorem"),
                       item: {
                         val:
                           "{\\left(x+a\\right)}^2=\\sum^n_{k=0}{\\left(^n_k\\right)x^ka^{n-k}}",
                       },
                     },
                     {
-                      label: "勾股定理",
+                      label: kfEditor.getLang("preset.pythagoreantheorem"),
                       item: {
                         val: "a^2+b^2=c^2",
                       },
@@ -73,27 +73,27 @@ define(function (require) {
           type: BOX_TYPE.OVERLAP,
           group: [
             {
-              title: "基础数学",
+              title: kfEditor.getLang("basicmathematics.title"),
               items: [],
             },
             {
-              title: "希腊字母",
+              title: kfEditor.getLang("greekletter.title"),
               items: [],
             },
             {
-              title: "求反关系运算符",
+              title: kfEditor.getLang("negatedrelationaloperators.title"),
               items: [],
             },
             {
-              title: "字母类符号",
+              title: kfEditor.getLang("letterlikesymbols.title"),
               items: [],
             },
             {
-              title: "箭头",
+              title: kfEditor.getLang("arrow.title"),
               items: [],
             },
             {
-              title: "手写体",
+              title: kfEditor.getLang("handwritten.title"),
               items: [],
             },
           ],
@@ -107,7 +107,7 @@ define(function (require) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "分数<br/>",
+          label: kfEditor.getLang("labelMap.fraction"),
           icon: {
             src: require("assets/images/toolbar/btn.png"),
             x: 45,
@@ -118,10 +118,10 @@ define(function (require) {
           width: 332,
           group: [
             {
-              title: "分数",
+              title: kfEditor.getLang("fraction.fraction"),
               items: [
                 {
-                  title: "分数",
+                  title: kfEditor.getLang("fraction.fraction"),
                   content: [
                     {
                       item: {
@@ -136,7 +136,7 @@ define(function (require) {
                   ],
                 },
                 {
-                  title: "常用分数",
+                  title: kfEditor.getLang("fraction.commonfraction"),
                   content: [
                     {
                       item: {
@@ -170,7 +170,7 @@ define(function (require) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "上下标<br/>",
+          label: kfEditor.getLang("labelMap.subsupscript"),
           icon: {
             src: require("assets/images/toolbar/btn.png"),
             x: 82,
@@ -181,10 +181,10 @@ define(function (require) {
           width: 332,
           group: [
             {
-              title: "上标和下标",
+              title: kfEditor.getLang("subsupscript.subsupscript"),
               items: [
                 {
-                  title: "上标和下标",
+                  title: kfEditor.getLang("subsupscript.subsupscript"),
                   content: [
                     {
                       item: {
@@ -209,7 +209,7 @@ define(function (require) {
                   ],
                 },
                 {
-                  title: "常用的上标和下标",
+                  title: kfEditor.getLang("subsupscript.commonsubsupscript"),
                   content: [
                     {
                       item: {
@@ -238,7 +238,7 @@ define(function (require) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "根式<br/>",
+          label: kfEditor.getLang("labelMap.roots"),
           icon: {
             src: require("assets/images/toolbar/btn.png"),
             x: 119,
@@ -249,10 +249,10 @@ define(function (require) {
           width: 342,
           group: [
             {
-              title: "根式",
+              title: kfEditor.getLang("roots.roots"),
               items: [
                 {
-                  title: "根式",
+                  title: kfEditor.getLang("roots.roots"),
                   content: [
                     {
                       item: {
@@ -277,7 +277,7 @@ define(function (require) {
                   ],
                 },
                 {
-                  title: "常用根式",
+                  title: kfEditor.getLang("roots.commonroots"),
                   content: [
                     {
                       item: {
@@ -301,7 +301,7 @@ define(function (require) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "积分<br/>",
+          label: kfEditor.getLang("labelMap.integral"),
           icon: {
             src: require("assets/images/toolbar/btn.png"),
             x: 156,
@@ -312,10 +312,10 @@ define(function (require) {
           width: 332,
           group: [
             {
-              title: "积分",
+              title: kfEditor.getLang("integral.integral"),
               items: [
                 {
-                  title: "积分",
+                  title: kfEditor.getLang("integral.integral"),
                   content: [
                     {
                       item: {
@@ -359,7 +359,7 @@ define(function (require) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "大型<br/>运算符",
+          label: kfEditor.getLang("labelMap.largeoperator"),
           icon: {
             src: require("assets/images/toolbar/btn.png"),
             x: 193,
@@ -370,10 +370,10 @@ define(function (require) {
           width: 332,
           group: [
             {
-              title: "求和",
+              title: kfEditor.getLang("largeoperator.largeoperator"),
               items: [
                 {
-                  title: "求和",
+                  title: kfEditor.getLang("largeoperator.largeoperator"),
                   content: [
                     {
                       item: {
@@ -402,7 +402,7 @@ define(function (require) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "括号<br/>",
+          label: kfEditor.getLang("labelMap.bracket"),
           icon: {
             src: require("assets/images/toolbar/btn.png"),
             x: 230,
@@ -413,10 +413,10 @@ define(function (require) {
           width: 332,
           group: [
             {
-              title: "方括号",
+              title: kfEditor.getLang("bracket.bracket"),
               items: [
                 {
-                  title: "方括号",
+                  title: kfEditor.getLang("bracket.bracket"),
                   content: [
                     {
                       item: {
@@ -450,7 +450,7 @@ define(function (require) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: "函数<br/>",
+          label: kfEditor.getLang("labelMap.function"),
           icon: {
             src: require("assets/images/toolbar/btn.png"),
             x: 267,
@@ -461,10 +461,10 @@ define(function (require) {
           width: 340,
           group: [
             {
-              title: "函数",
+              title: kfEditor.getLang("function.title"),
               items: [
                 {
-                  title: "三角函数",
+                  title: kfEditor.getLang("function.trigonometric"),
                   content: [
                     {
                       item: {
@@ -499,7 +499,7 @@ define(function (require) {
                   ],
                 },
                 {
-                  title: "常用函数",
+                  title: kfEditor.getLang("function.commonfunction"),
                   content: [
                     {
                       item: {
@@ -514,6 +514,42 @@ define(function (require) {
                     {
                       item: {
                         val: "\\tan\\theta=\\frac {\\sin\\theta}{\\cos\\theta}",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+    {
+      type: UI_ELE_TYPE.DRAPDOWN_BOX,
+      options: {
+        button: {
+          label: kfEditor.getLang("labelMap.vector"),
+          icon: {
+            src: require("assets/images/toolbar/button/vector.png"),
+            x: 0,
+            y: 0,
+          },
+        },
+        box: {
+          width: 340,
+          group: [
+            {
+              items: [
+                {
+                  content: [
+                    {
+                      item: {
+                        val: "{^\\longrightarrow_\\placeholder}",
+                      },
+                    },
+                    {
+                      item: {
+                        val: "{^\\placeholder_\\placeholder}",
                       },
                     },
                   ],
@@ -618,7 +654,7 @@ define(function (require) {
       configList = config[2].options.box.group[0].items;
 
     configList.push({
-      title: "基础数学",
+      title: kfEditor.getLang("basicmathematics.title"),
       content: getIconContents(list, require("assets/images/toolbar/char.png")),
     });
   })();
@@ -627,7 +663,7 @@ define(function (require) {
   (function () {
     var greekList = [
         {
-          title: "小写",
+          title: kfEditor.getLang("greekletter.lowercase"),
           values: [
             "alpha",
             "beta",
@@ -656,7 +692,7 @@ define(function (require) {
           ],
         },
         {
-          title: "大写",
+          title: kfEditor.getLang("greekletter.uppercase"),
           values: [
             "Alpha",
             "Beta",
@@ -685,7 +721,7 @@ define(function (require) {
           ],
         },
         {
-          title: "变体",
+          title: kfEditor.getLang("greekletter.variants"),
           values: [
             "digamma",
             "varepsilon",
@@ -732,7 +768,7 @@ define(function (require) {
   (function () {
     var greekList = [
         {
-          title: "求反关系运算符",
+          title: kfEditor.getLang("negatedrelationaloperators.title"),
           values: [
             "neq",
             "nless",
@@ -803,7 +839,7 @@ define(function (require) {
       configList = config[2].options.box.group[3].items;
 
     configList.push({
-      title: "字母类符号",
+      title: kfEditor.getLang("letterlikesymbols.title"),
       content: getIconContents(list, require("assets/images/toolbar/char.png")),
     });
   })();
@@ -875,7 +911,7 @@ define(function (require) {
       configList = config[2].options.box.group[4].items;
 
     configList.push({
-      title: "箭头",
+      title: kfEditor.getLang("arrow.title"),
       content: getIconContents(list, require("assets/images/toolbar/char.png")),
     });
   })();
@@ -884,7 +920,7 @@ define(function (require) {
   (function () {
     var list = [
         {
-          title: "手写体",
+          title: kfEditor.getLang("handwritten.title"),
           values: [
             "A",
             "B",
@@ -915,7 +951,7 @@ define(function (require) {
           ],
         },
         {
-          title: "花体",
+          title: kfEditor.getLang("handwritten.curlicue"),
           values: [
             "A",
             "B",
@@ -972,7 +1008,7 @@ define(function (require) {
           ],
         },
         {
-          title: "双线",
+          title: kfEditor.getLang("handwritten.doble"),
           values: [
             "A",
             "B",
@@ -1003,7 +1039,7 @@ define(function (require) {
           ],
         },
         {
-          title: "罗马",
+          title: kfEditor.getLang("handwritten.roman"),
           values: [
             "A",
             "B",
@@ -1131,4 +1167,4 @@ define(function (require) {
   }
 
   return config;
-});
+};
