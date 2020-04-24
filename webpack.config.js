@@ -38,6 +38,9 @@ module.exports = (env, { mode, port }) => {
       modules: ["node_modules", path.resolve(__dirname, "src/")],
       extensions: [".js", ".json", ".jsx", ".css"],
       alias: {
+        "kity-graph$": path.resolve(__dirname, "kity/dist2/index.js"),
+        "kity-parser$": path.resolve(__dirname, "kf-parser/dist/index.js"),
+        "kity-render$": path.resolve(__dirname, "kf-render/dist/index.js"),
         lib: path.resolve(__dirname, "lib"),
         "dev-lib": path.resolve(__dirname, "dev-lib"),
         base$: path.resolve(__dirname, "src/base"),
