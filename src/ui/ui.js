@@ -55,7 +55,7 @@ define(function (require) {
           this.editArea,
           this.canvasContainer
         );
-        this.handleWindowResize();
+        // this.handleWindowResize();
 
         this.initScrollEvent();
       },
