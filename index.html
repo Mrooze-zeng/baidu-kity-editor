@@ -74,6 +74,27 @@
     class="kf-editor"
     style="width: 780px; height: 502px; position: absolute; top: 20px; left: 50px;"
   ></div>
+  <button
+    type="button"
+    id="btn"
+  >save</button>
+  <div id="result"></div>
+  <style>
+    #result {
+      position: relative;
+      top: 50vh;
+    }
+  </style>
+  <script>
+    const btn = document.getElementById("btn");
+    const result = document.getElementById("result");
+    btn.addEventListener("click", () => {
+      kfe.execCommand("get.image.data", (data) => {
+        console.log(result)
+        result.innerHTML = '<img src="' + data.img + '"/>'
+      })
+    })
+  </script>
 </body>
 
 </html>

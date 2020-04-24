@@ -2,102 +2,80 @@
  * 打印服务
  */
 
-define( function ( require ) {
+define(function (require) {
+  var kity = require("kity");
 
-    var kity = require( "kity" );
+  return kity.createClass("Printer", {
+    constructor: function (kfEditor) {
+      this.kfEditor = kfEditor;
 
-    return kity.createClass( "Printer", {
+      this.initServices();
 
-        constructor: function ( kfEditor ) {
+      this.initCommands();
+    },
 
-            this.kfEditor = kfEditor;
+    initServices: function () {
+      this.kfEditor.registerService("print.image", this, {
+        printImage: this.printImage,
+      });
+    },
 
-            this.initServices();
+    initCommands: function () {
+      this.kfEditor.registerCommand("get.image.data", this, this.getImageData);
+    },
 
-            this.initCommands();
+    printImage: function (type) {
+      var formula = this.kfEditor.requestService("render.get.paper");
 
-        },
+      this._formatCanvas();
 
-        initServices: function () {
+      formula.toPNG(function (dataUrl) {
+        document.body.innerHTML =
+          '<img style="background: red;" src="' + dataUrl + '">';
+      });
 
-            this.kfEditor.registerService( "print.image", this, {
-                printImage: this.printImage
-            } );
+      this._restoreCanvas();
+    },
 
-        },
+    getImageData: function (cb) {
+      var canvas = this.kfEditor.requestService("render.get.canvas"),
+        formula = this.kfEditor.requestService("render.get.paper");
+      console.log(formula.node);
 
-        initCommands: function () {
+      this._formatCanvas();
 
-            this.kfEditor.registerCommand( "get.image.data", this, this.getImageData );
+      formula.toPNG(function (dataUrl) {
+        cb({
+          width: canvas.width,
+          height: canvas.height,
+          img: dataUrl,
+        });
+      });
 
-        },
+      this._restoreCanvas();
+    },
 
-        printImage: function ( type ) {
+    _formatCanvas: function () {
+      var canvas = this.kfEditor.requestService("render.get.canvas"),
+        rect = canvas.container.getRenderBox();
 
-            var formula = this.kfEditor.requestService( "render.get.paper" );
+      canvas.node.setAttribute("width", rect.width);
+      canvas.node.setAttribute("height", rect.height);
 
-            this._formatCanvas();
+      this.kfEditor.requestService("render.clear.canvas.transform");
+      this.kfEditor.requestService("control.cursor.hide");
+      this.kfEditor.requestService("render.clear.select");
+    },
 
-            formula.toPNG( function ( dataUrl ) {
+    _restoreCanvas: function () {
+      var canvas = this.kfEditor.requestService("render.get.canvas");
 
-                document.body.innerHTML = '<img style="background: red;" src="'+ dataUrl +'">';
+      canvas.node.setAttribute("width", "100%");
+      canvas.node.setAttribute("height", "100%");
 
-            } );
-
-            this._restoreCanvas();
-
-        },
-
-        getImageData: function ( cb ) {
-
-            var canvas = this.kfEditor.requestService( "render.get.canvas" ),
-                formula = this.kfEditor.requestService( "render.get.paper" );
-
-            this._formatCanvas();
-
-            formula.toPNG( function ( dataUrl ) {
-
-                cb( {
-                    width: canvas.width,
-                    height: canvas.height,
-                    img: dataUrl
-                } );
-
-            } );
-
-            this._restoreCanvas();
-
-        },
-
-        _formatCanvas: function () {
-
-            var canvas = this.kfEditor.requestService( "render.get.canvas" ),
-                rect = canvas.container.getRenderBox();
-
-            canvas.node.setAttribute( "width", rect.width );
-            canvas.node.setAttribute( "height", rect.height );
-
-            this.kfEditor.requestService( "render.clear.canvas.transform" );
-            this.kfEditor.requestService( "control.cursor.hide" );
-            this.kfEditor.requestService( "render.clear.select" );
-
-        },
-
-        _restoreCanvas: function () {
-
-            var canvas = this.kfEditor.requestService( "render.get.canvas" );
-
-            canvas.node.setAttribute( "width", "100%" );
-            canvas.node.setAttribute( "height", "100%" );
-
-            this.kfEditor.requestService( "render.revert.canvas.transform" );
-            this.kfEditor.requestService( "control.cursor.relocation" );
-            this.kfEditor.requestService( "render.reselect" );
-
-        }
-
-    } );
-
-} );
-
-
+      this.kfEditor.requestService("render.revert.canvas.transform");
+      this.kfEditor.requestService("control.cursor.relocation");
+      this.kfEditor.requestService("render.reselect");
+    },
+  });
+});

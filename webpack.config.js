@@ -39,6 +39,7 @@ module.exports = (env, { mode, port }) => {
       extensions: [".js", ".json", ".jsx", ".css"],
       alias: {
         lib: path.resolve(__dirname, "lib"),
+        "dev-lib": path.resolve(__dirname, "dev-lib"),
         base$: path.resolve(__dirname, "src/base"),
         "kf-ext$": path.resolve(__dirname, "src/kf-ext"),
         parse$: path.resolve(__dirname, "src/parse"),
@@ -50,6 +51,7 @@ module.exports = (env, { mode, port }) => {
         assets: path.resolve(__dirname, "./assets"),
         Assets: path.resolve(__dirname, "./assets"),
         Resource: path.resolve(__dirname, "./resource"),
+        resource: path.resolve(__dirname, "resource"),
         Lange: path.resolve(__dirname, "./src/lang"),
       },
     },

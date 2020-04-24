@@ -1,6 +1,8 @@
 const jQuery = require("jquery");
 const Factory = require("./index");
 
+console.log(require("resource/KF_AMS_BB.woff"));
+
 jQuery(function ($) {
   var factory = Factory.create($("#kfEditorContainer")[0], {
     render: {
@@ -8,6 +10,7 @@ jQuery(function ($) {
     },
     resource: {
       path: "resource/",
+      packFont: true,
     },
   });
 
