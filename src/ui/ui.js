@@ -55,8 +55,19 @@ define(function (require) {
           this.editArea,
           this.canvasContainer
         );
+        this.handleWindowResize();
 
         this.initScrollEvent();
+      },
+      handleWindowResize() {
+        window.addEventListener("resize", () => {
+          this.updateContainerSize(
+            this.container,
+            this.toolbarWrap,
+            this.editArea,
+            this.canvasContainer
+          );
+        });
       },
 
       // 组件实例化
@@ -85,6 +96,7 @@ define(function (require) {
       },
 
       updateContainerSize: function (container, toolbar, editArea) {
+        var boxHeight = container.ownerDocument.defaultView.innerHeight;
         var containerBox = container.getBoundingClientRect(),
           toolbarBox = toolbar.getBoundingClientRect();
 
@@ -207,7 +219,8 @@ define(function (require) {
     var container = doc.createElement("div");
     container.className = "kf-editor-edit-area";
     container.style.width = "80%";
-    container.style.height = "800px";
+    // container.style.height = "800px";
+    container.style.height = "auto";
     return container;
   }
 
