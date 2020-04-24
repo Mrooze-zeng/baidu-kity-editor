@@ -46,6 +46,7 @@ module.exports = (env, { mode, port }) => {
         font: path.resolve(__dirname, "src/font"),
         operator: path.resolve(__dirname, "src/operator"),
         resource: path.resolve(__dirname, "src/resource"),
+        Resource: path.resolve(__dirname, "src/resource"),
       },
     },
     plugins: [new CleanWebpackPlugin()],
