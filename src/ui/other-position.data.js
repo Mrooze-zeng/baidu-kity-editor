@@ -456,11 +456,51 @@ define(function () {
     },
     "{^\\placeholder_\\placeholder}": {
       pos: {
-        x: 1494,
+        x: 3738,
         y: 0,
       },
       size: {
         width: 26,
+        height: 75,
+      },
+    },
+    "{\\left|{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right|}": {
+      pos: {
+        x: 3775,
+        y: 0,
+      },
+      size: {
+        width: 75,
+        height: 75,
+      },
+    },
+    "{\\left\\{{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right\\}}": {
+      pos: {
+        x: 3858,
+        y: 0,
+      },
+      size: {
+        width: 75,
+        height: 75,
+      },
+    },
+    "{\\left({^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right)}": {
+      pos: {
+        x: 3938,
+        y: 0,
+      },
+      size: {
+        width: 75,
+        height: 75,
+      },
+    },
+    "{\\left[{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right]}": {
+      pos: {
+        x: 4025,
+        y: 0,
+      },
+      size: {
+        width: 75,
         height: 75,
       },
     },

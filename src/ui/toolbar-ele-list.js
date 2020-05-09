@@ -552,6 +552,30 @@ module.exports = function (kfEditor) {
                         val: "{^\\placeholder_\\placeholder}",
                       },
                     },
+                    {
+                      item: {
+                        val:
+                          "{\\left|{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right|}",
+                      },
+                    },
+                    {
+                      item: {
+                        val:
+                          "{\\left\\{{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right\\}}",
+                      },
+                    },
+                    {
+                      item: {
+                        val:
+                          "{\\left({^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right)}",
+                      },
+                    },
+                    {
+                      item: {
+                        val:
+                          "{\\left[{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right]}",
+                      },
+                    },
                   ],
                 },
               ],
