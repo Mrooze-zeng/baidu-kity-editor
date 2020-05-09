@@ -382,7 +382,6 @@ define(function (require) {
       },
 
       render: function (latexStr) {
-        console.log(latexStr);
         var parsedTree = this.kfEditor.requestService(
             "parser.parse",
             latexStr,
