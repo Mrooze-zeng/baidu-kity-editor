@@ -39,7 +39,8 @@ define(function (require) {
       args = arguments,
       ctx = null;
 
-    if (!isChromeCore()) {
+    // if (!isChromeCore()) {
+    if (true) {
       drawToCanvas.apply(null, args);
     } else {
       canvas = getImageCanvas(doc, data.width, data.height, type);
@@ -101,12 +102,14 @@ define(function (require) {
 
   function drawToCanvas(doc, data, type, cb) {
     var canvas = getImageCanvas(doc, data.width, data.height, type);
+    var ctx = canvas.getContext("2d");
 
     canvas.style.cssText =
       "position: absolute; top: 0; left: 100000px; z-index: -1;";
 
     doc.body.appendChild(canvas);
-    canvg(canvas, data.content);
+    var v = canvg.Canvg.fromString(ctx, data.content);
+    v.start();
     doc.body.removeChild(canvas);
 
     window.setTimeout(function () {

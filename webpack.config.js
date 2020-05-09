@@ -6,7 +6,7 @@ module.exports = (env, { mode, port }) => {
   return {
     mode: mode,
     entry: {
-      demo: path.resolve(__dirname, "./src/demo.js"),
+      index: path.resolve(__dirname, "./src/demo.js"),
     },
     output: {
       path: path.resolve(__dirname, "dist"),
