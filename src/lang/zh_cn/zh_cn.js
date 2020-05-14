@@ -29,6 +29,7 @@ module.exports = {
     curlicue: "花体",
     doble: "双线",
     roman: "罗马",
+    others: "其他",
   },
   letterlikesymbols: { title: "字母类符号", letterlikesymbols: "字母类符号" },
   greekletter: {

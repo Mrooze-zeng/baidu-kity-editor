@@ -32,6 +32,7 @@ module.exports = {
     curlicue: "Curlicue",
     doble: "Double",
     roman: "Roman",
+    others: "Others",
   },
   letterlikesymbols: {
     title: "Letter-like symbols",
