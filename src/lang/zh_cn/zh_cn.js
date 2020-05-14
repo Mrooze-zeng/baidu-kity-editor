@@ -46,7 +46,7 @@ module.exports = {
     trigonometric: "三角函数",
     commonfunction: "常用函数",
   },
-  bracket: { bracket: "方括号" },
+  bracket: { bracket: "方括号", matrix: "矩阵" },
   subsupscript: {
     subsupscript: "上标和下标",
     commonsubsupscript: "常用的上标和下标",

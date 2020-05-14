@@ -40,7 +40,7 @@ define(function (require) {
     getImageData: function (cb) {
       var canvas = this.kfEditor.requestService("render.get.canvas"),
         formula = this.kfEditor.requestService("render.get.paper");
-      console.log(formula.node);
+      // console.log(formula.node);
 
       this._formatCanvas();
 

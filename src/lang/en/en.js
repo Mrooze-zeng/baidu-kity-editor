@@ -52,7 +52,7 @@ module.exports = {
     trigonometric: "Trigonometric",
     commonfunction: "Common function",
   },
-  bracket: { bracket: "Brackets" },
+  bracket: { bracket: "Brackets", matrix: "Matrix" },
   subsupscript: {
     subsupscript: "Superscript and subscript",
     commonsubsupscript: "Common superscript and subscript",

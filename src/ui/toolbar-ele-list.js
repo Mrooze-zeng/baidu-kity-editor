@@ -440,6 +440,35 @@ module.exports = function (kfEditor) {
                     },
                   ],
                 },
+                {
+                  title: kfEditor.getLang("bracket.matrix"),
+                  content: [
+                    {
+                      item: {
+                        val:
+                          "{\\left({^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right)}",
+                      },
+                    },
+                    {
+                      item: {
+                        val:
+                          "{\\left[{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right]}",
+                      },
+                    },
+                    {
+                      item: {
+                        val:
+                          "{\\left\\{{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right\\}}",
+                      },
+                    },
+                    {
+                      item: {
+                        val:
+                          "{\\left|{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right|}",
+                      },
+                    },
+                  ],
+                },
               ],
             },
           ],
@@ -550,30 +579,6 @@ module.exports = function (kfEditor) {
                     {
                       item: {
                         val: "{^\\placeholder_\\placeholder}",
-                      },
-                    },
-                    {
-                      item: {
-                        val:
-                          "{\\left|{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right|}",
-                      },
-                    },
-                    {
-                      item: {
-                        val:
-                          "{\\left\\{{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right\\}}",
-                      },
-                    },
-                    {
-                      item: {
-                        val:
-                          "{\\left({^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right)}",
-                      },
-                    },
-                    {
-                      item: {
-                        val:
-                          "{\\left[{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right]}",
                       },
                     },
                   ],
