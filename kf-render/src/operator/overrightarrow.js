@@ -39,8 +39,8 @@ define(function (require) {
     this.addOperatorShape(DLine);
     this.addOperatorShape(hLine);
 
-    this.parentExpression.expand(0, padding * 3);
-    this.parentExpression.translateElement(0, padding * 2);
+    // this.parentExpression.expand(0, padding * 2);
+    // this.parentExpression.translateElement(0, 0);
   }
 
   function generateUDLine(operand, isSup = -1) {
