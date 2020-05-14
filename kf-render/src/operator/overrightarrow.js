@@ -31,16 +31,16 @@ define(function (require) {
       ULine = generateUDLine(exponent),
       DLine = generateUDLine(exponent, 1);
 
-    hLine.translate(0, -10);
-    ULine.translate(0, -10);
-    DLine.translate(0, -10);
+    hLine.translate(0, -2.5);
+    ULine.translate(0, -2.5);
+    DLine.translate(0, -2.5);
 
     this.addOperatorShape(ULine);
     this.addOperatorShape(DLine);
     this.addOperatorShape(hLine);
 
-    this.parentExpression.expand(0, padding * 2);
-    this.parentExpression.translateElement(0, padding);
+    this.parentExpression.expand(0, padding * 3);
+    this.parentExpression.translateElement(0, padding * 2);
   }
 
   function generateUDLine(operand, isSup = -1) {
@@ -50,7 +50,7 @@ define(function (require) {
       drawer = shape.getDrawer();
 
     drawer.moveTo(w + 2, 0);
-    drawer.lineTo(w - 6, isSup * 6);
+    drawer.lineTo(w - 6, isSup * 4.5);
     drawer.close();
     shape.fill("none");
     return shape.stroke("black");

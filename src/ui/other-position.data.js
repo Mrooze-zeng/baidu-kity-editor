@@ -444,7 +444,7 @@ define(function () {
         height: 75,
       },
     },
-    "{^\\longrightarrow_\\placeholder}": {
+    "\\overrightarrow \\placeholder": {
       pos: {
         x: 3700,
         y: 0,
@@ -501,16 +501,6 @@ define(function () {
       },
       size: {
         width: 75,
-        height: 75,
-      },
-    },
-    "\\overrightarrow \\placeholder": {
-      pos: {
-        x: 1738,
-        y: 0,
-      },
-      size: {
-        width: 56,
         height: 75,
       },
     },
