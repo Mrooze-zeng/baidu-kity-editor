@@ -1,5 +1,25 @@
 const jQuery = require("jquery");
 const Factory = require("./index");
+// var paper = new kity.Paper(document.body).pipe(function () {
+//   this.setWidth(900);
+//   this.setHeight(600);
+//   this.setViewBox(0, 0, 400, 300);
+// });
+
+// var path = new kity.Path().pipe(function () {
+//   this.getDrawer().pipe(function (d) {
+//     d.moveTo(100, 10);
+//     // d.carcTo(60, 100, 100);
+//     d.lineTo(200, 10);
+//     d.moveTo(200, 10);
+//     d.lineTo(200, 100);
+//     d.close();
+//   });
+//   this.fill("none");
+//   this.stroke("red");
+// });
+
+// paper.addShape(path);
 
 jQuery(function ($) {
   var tinymceEditor = top.tinymce?.activeEditor;

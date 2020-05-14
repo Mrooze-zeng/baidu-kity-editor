@@ -581,6 +581,11 @@ module.exports = function (kfEditor) {
                         val: "{^\\placeholder_\\placeholder}",
                       },
                     },
+                    {
+                      item: {
+                        val: "\\overrightarrow \\placeholder",
+                      },
+                    },
                   ],
                 },
               ],

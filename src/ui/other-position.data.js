@@ -504,5 +504,15 @@ define(function () {
         height: 75,
       },
     },
+    "\\overrightarrow \\placeholder": {
+      pos: {
+        x: 1738,
+        y: 0,
+      },
+      size: {
+        width: 56,
+        height: 75,
+      },
+    },
   };
 });
