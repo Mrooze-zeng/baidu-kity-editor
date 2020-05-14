@@ -9,7 +9,7 @@ module.exports = {
     function: "函数<br/>",
     bracket: "括号<br/>",
     subsupscript: "上下标<br/>",
-    vector: "向量<br>",
+    others: "其他<br>",
   },
   preset: {
     title: "预设公式",

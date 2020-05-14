@@ -557,7 +557,7 @@ module.exports = function (kfEditor) {
       type: UI_ELE_TYPE.DRAPDOWN_BOX,
       options: {
         button: {
-          label: kfEditor.getLang("labelMap.vector"),
+          label: kfEditor.getLang("labelMap.others"),
           icon: {
             src: require("assets/images/toolbar/button/vector.png"),
             x: 0,

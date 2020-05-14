@@ -9,7 +9,7 @@ module.exports = {
     function: "Function<br/>",
     bracket: "Brackets<br/>",
     subsupscript: "Subscript<br/>Superscript",
-    vector: "Vector<br>",
+    others: "Others<br>",
   },
   preset: {
     title: "Preset formulas",
