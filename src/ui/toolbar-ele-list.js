@@ -573,14 +573,15 @@ module.exports = function (kfEditor) {
                   content: [
                     {
                       item: {
-                        val: "\\overrightarrow \\placeholder",
+                        val: "\\vec \\placeholder",
                       },
                     },
                     {
                       item: {
-                        val: "{^\\placeholder_\\placeholder}",
+                        val: "\\overrightarrow \\placeholder",
                       },
                     },
+
                     {
                       item: {
                         val: "\\hat \\placeholder",
@@ -593,7 +594,7 @@ module.exports = function (kfEditor) {
                     },
                     {
                       item: {
-                        val: "\\vec \\placeholder",
+                        val: "{^\\placeholder_\\placeholder}",
                       },
                     },
                   ],

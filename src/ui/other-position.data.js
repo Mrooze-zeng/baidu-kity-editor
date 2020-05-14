@@ -446,17 +446,17 @@ define(function () {
     },
     "\\overrightarrow \\placeholder": {
       pos: {
-        x: 3700,
+        x: 3695,
         y: 0,
       },
       size: {
-        width: 26,
+        width: 36,
         height: 75,
       },
     },
     "{^\\placeholder_\\placeholder}": {
       pos: {
-        x: 3738,
+        x: 3745,
         y: 0,
       },
       size: {
@@ -466,7 +466,7 @@ define(function () {
     },
     "{\\left|{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right|}": {
       pos: {
-        x: 3775,
+        x: 3780,
         y: 0,
       },
       size: {
@@ -476,7 +476,7 @@ define(function () {
     },
     "{\\left\\{{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right\\}}": {
       pos: {
-        x: 3858,
+        x: 3865,
         y: 0,
       },
       size: {
@@ -486,7 +486,7 @@ define(function () {
     },
     "{\\left({^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right)}": {
       pos: {
-        x: 3938,
+        x: 3946,
         y: 0,
       },
       size: {
@@ -496,7 +496,7 @@ define(function () {
     },
     "{\\left[{^{\\placeholder }_{\\placeholder }}{^\\placeholder_\\placeholder}\\right]}": {
       pos: {
-        x: 4025,
+        x: 4035,
         y: 0,
       },
       size: {
@@ -506,31 +506,31 @@ define(function () {
     },
     "\\hat \\placeholder": {
       pos: {
-        x: 3738,
+        x: 4200,
         y: 0,
       },
       size: {
-        width: 26,
+        width: 36,
         height: 75,
       },
     },
     "\\widehat \\placeholder": {
       pos: {
-        x: 3738,
+        x: 4135,
         y: 0,
       },
       size: {
-        width: 26,
+        width: 45,
         height: 75,
       },
     },
     "\\vec \\placeholder": {
       pos: {
-        x: 3738,
+        x: 4253,
         y: 0,
       },
       size: {
-        width: 26,
+        width: 36,
         height: 75,
       },
     },
