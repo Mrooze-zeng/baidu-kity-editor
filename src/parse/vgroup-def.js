@@ -15,5 +15,7 @@ define(function () {
     brackets: true,
     function: true,
     overrightarrow: true,
+    hat: true,
+    widehat: true,
   };
 });

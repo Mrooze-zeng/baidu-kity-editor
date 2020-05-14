@@ -13,6 +13,8 @@ define(function (require) {
     script: require("impl/latex/reverse/script"),
     radical: require("impl/latex/reverse/sqrt"),
     overrightarrow: require("impl/latex/reverse/overrightarrow"),
+    hat: require("impl/latex/reverse/hat"),
+    widehat: require("impl/latex/reverse/widehat"),
     summation: require("impl/latex/reverse/summation"),
     brackets: require("impl/latex/reverse/brackets"),
     mathcal: require("impl/latex/reverse/mathcal"),

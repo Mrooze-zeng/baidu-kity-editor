@@ -24,7 +24,7 @@ const Factory = require("./index");
 jQuery(function ($) {
   var tinymceEditor = top.tinymce?.activeEditor;
   var img = tinymceEditor?.selection.getNode();
-  var imgLatex = (img && $(img).attr("data-latex")) + "";
+  var imgLatex = img && $(img).attr("data-latex");
   var lang = (top.store && top.store.get("__i18n_language__")) || "en_us";
   var factory = Factory.create($("#kfEditorContainer")[0], {
     render: {

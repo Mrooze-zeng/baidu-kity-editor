@@ -81,5 +81,17 @@ define(function (require) {
       sign: false,
       handler: require("impl/latex/handler/overrightarrow"),
     },
+    hat: {
+      name: "hat",
+      type: TYPE.FN,
+      sign: false,
+      handler: require("impl/latex/handler/hat"),
+    },
+    widehat: {
+      name: "widehat",
+      type: TYPE.FN,
+      sign: false,
+      handler: require("impl/latex/handler/widehat"),
+    },
   };
 });

@@ -581,6 +581,16 @@ module.exports = function (kfEditor) {
                         val: "{^\\placeholder_\\placeholder}",
                       },
                     },
+                    {
+                      item: {
+                        val: "\\hat \\placeholder",
+                      },
+                    },
+                    {
+                      item: {
+                        val: "\\widehat \\placeholder",
+                      },
+                    },
                   ],
                 },
               ],
