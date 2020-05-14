@@ -524,5 +524,15 @@ define(function () {
         height: 75,
       },
     },
+    "\\vec \\placeholder": {
+      pos: {
+        x: 3738,
+        y: 0,
+      },
+      size: {
+        width: 26,
+        height: 75,
+      },
+    },
   };
 });

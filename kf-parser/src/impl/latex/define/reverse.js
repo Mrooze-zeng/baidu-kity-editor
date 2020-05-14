@@ -15,6 +15,7 @@ define(function (require) {
     overrightarrow: require("impl/latex/reverse/overrightarrow"),
     hat: require("impl/latex/reverse/hat"),
     widehat: require("impl/latex/reverse/widehat"),
+    vec: require("impl/latex/reverse/vec"),
     summation: require("impl/latex/reverse/summation"),
     brackets: require("impl/latex/reverse/brackets"),
     mathcal: require("impl/latex/reverse/mathcal"),

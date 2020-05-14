@@ -29,6 +29,7 @@ module.exports.kf = window.kf = {
   OverrightarrowExpression: require("expression/compound-exp/overrightarrow"),
   HatExpression: require("expression/compound-exp/hat"),
   WidehatExpression: require("expression/compound-exp/widehat"),
+  VecExpression: require("expression/compound-exp/vec"),
   IntegrationExpression: require("expression/compound-exp/integration"),
   RadicalExpression: require("expression/compound-exp/radical"),
   ScriptExpression: require("expression/compound-exp/script"),

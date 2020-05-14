@@ -93,5 +93,11 @@ define(function (require) {
       sign: false,
       handler: require("impl/latex/handler/widehat"),
     },
+    vec: {
+      name: "vec",
+      type: TYPE.FN,
+      sign: false,
+      handler: require("impl/latex/handler/vec"),
+    },
   };
 });

@@ -591,6 +591,11 @@ module.exports = function (kfEditor) {
                         val: "\\widehat \\placeholder",
                       },
                     },
+                    {
+                      item: {
+                        val: "\\vec \\placeholder",
+                      },
+                    },
                   ],
                 },
               ],

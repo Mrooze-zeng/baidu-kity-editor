@@ -17,5 +17,6 @@ define(function () {
     overrightarrow: true,
     hat: true,
     widehat: true,
+    vec: true,
   };
 });
